@@ -1,7 +1,7 @@
 # Practica servidor web
 
 **Estudiante:** Juan Bravo · **GitHub:** [Jbra420](https://github.com/Jbra420)
-**Asignatura:** Software Aplicativo · **Tarea autónoma:** Semana 1 · **Fecha:** octubre 2026
+**Asignatura:** Tendencias Tecnologicas · **Tarea autónoma:** Semana 1 · **Fecha:** octubre 2026
 
 ## 1. Titulo
 
