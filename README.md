@@ -31,9 +31,6 @@ Como cada contenedor tiene su propia red aislada, su puerto 80 no es accesible d
 
 Finalmente, el comando **`docker cp`** permite copiar archivos entre el sistema anfitrión y un contenedor en ambas direcciones. Gracias a él podemos extraer el `index.html` original, editarlo cómodamente con un editor de texto como `nano` o `vi`, y volver a colocarlo dentro del contenedor sin necesidad de reconstruir la imagen. Otros comandos útiles son `docker ps` (lista contenedores activos), `docker stop`/`docker start` (detiene o inicia) y `docker rm` (elimina un contenedor).
 
-<p align="center">
-  <img src="img/diagrama-contenedores.svg" alt="Diagrama de contenedores" width="800">
-</p>
 
 **Figura 3-1.** Diagrama de la práctica: el navegador accede a dos contenedores Nginx a través de los puertos 8089 y 8090.
 
@@ -87,7 +84,6 @@ docker --version
 docker info
 ```
 
-![Figura 8-1](img/paso1-docker-version.png)
 
 **Figura 8-1.** Versión de Docker instalada.
 
@@ -111,8 +107,6 @@ docker run -d --name nginx2 -p 8090:80 nginx
 docker ps
 ```
 
-![Figura 8-2](img/paso4-docker-ps.png)
-
 **Figura 8-2.** Contenedores `nginx1` y `nginx2` en ejecución.
 
 **Paso 5: Copiar el `index.html` de `nginx1` al anfitrión.**
@@ -129,7 +123,6 @@ nano index1.html
 
 Se reemplazó el contenido por defecto ("Welcome to nginx!") con el nombre del instituto, misión, visión, carreras y datos de contacto. En `nano` se guarda con `Ctrl + O`, `Enter`, y se sale con `Ctrl + X`. El archivo final se encuentra en este repositorio: [index1.html](index1.html).
 
-![Figura 8-3](img/paso6-nano-index1.png)
 
 **Figura 8-3.** Edición de `index1.html` con nano.
 
@@ -168,11 +161,9 @@ Al finalizar la práctica se obtienen dos servidores web independientes ejecutá
 - En `http://localhost:8089` el contenedor **nginx1** muestra la página con la información institucional (nombre, misión, visión, carreras y contacto).
 - En `http://localhost:8090` el contenedor **nginx2** muestra la página personal del estudiante (nombre, carrera, intereses y enlace a GitHub).
 
-![Figura 9-1](img/resultado-nginx1.png)
 
 **Figura 9-1.** Página institucional servida por `nginx1` (puerto 8089).
 
-![Figura 9-2](img/resultado-nginx2.png)
 
 **Figura 9-2.** Página personal servida por `nginx2` (puerto 8090).
 
